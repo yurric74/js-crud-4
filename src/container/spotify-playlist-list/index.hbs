@@ -1,0 +1,118 @@
+<main class='main'>
+
+  <div class='main__content'>
+    <div class='header'>
+      <h1 class='title title--center'>Моя бібліотека</h1>
+      <div class='button'>
+        <form
+          method='POST'
+          action='/spotify-search'
+          class='search'
+        >
+          <a href='/spotify-search'>
+            <img src='/svg/spotify-search.svg' />
+          </a></form>
+        <form
+          method='POST'
+          action='/spotify-create'
+          class='create'
+        >
+
+          <a href='/spotify-choose'>
+            <img src='/svg/spotify-add.svg' />
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class='card__block'>
+    {{#with playlist}}
+      {{!-- <ul class='card__block'>
+        {{#each data}}
+          <li class='card'>
+            <img
+              src='{{image}}'
+              alt='{{name}}'
+              height='100px'
+              class='img'
+            />
+            <div class='name'>Name{{name}}</div>
+            <p>Songs{{amount}}</p>
+
+          </li>
+        {{/each}}
+      </ul> --}}
+      <ul class='playlist__list'>
+        {{#each tracs}}
+          <li class='playlist'>
+            <img
+              src='{{image}}'
+              alt='{{name}}'
+              height='100px'
+            />
+            <div class='playlist__content'>
+              <strong class='name'>НАЗВА ПЛЕЙЛИСТА{{name}}</strong>
+              <span class='amount'>Кількість пісень:{{amount}}</span>
+            </div>
+
+          </li>
+        {{/each}}
+      </ul>
+    {{/with}}
+  </div>
+</main>
+
+{{! <div class='card__block'>
+      <div class='card'>
+        <img
+          src='https://picsum.photos/100/100'
+          class='img'
+        />
+        <div class='name'>Name</div>
+        <p>Songs</p>
+      </div>
+      <div class='card'>
+        <img
+          src='https://picsum.photos/100/100'
+          class='img'
+        />
+        <div class='name'>Name</div>
+        <p>Songs</p>
+      </div>
+      <div class='card'>
+        <img
+          src='https://picsum.photos/100/100'
+          class='img'
+        />
+        <div class='name'>Name</div>
+        <p>Songs</p>
+      </div>
+      <div class='card'>
+        <img
+          src='https://picsum.photos/100/100'
+          class='img'
+        />
+        <div class='name'>Name</div>
+        <p>Songs</p>
+      </div>
+      <div class='card'>
+        <img
+          src='https://picsum.photos/100/100'
+          class='img'
+        />
+        <div class='name'>Name</div>
+        <p>Songs</p>
+      </div>
+      <div class='card'>
+        <img
+          src='https://picsum.photos/100/100'
+          class='img'
+        />
+        <div class='name'>Name</div>
+        <p>Songs</p>
+      </div>
+    </div>
+
+  </div>
+
+</main> }}
